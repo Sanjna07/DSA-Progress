@@ -40,7 +40,7 @@ DSA-Progress/
 | Topic                     | No. of Problems | Completed |
 |--------------------------|------------------|-----------|
 | Maths                    | 10               | 🔄 In Progress |
-| Arrays                   | 15               | 🔄 In Progress |
+| Arrays                   | 15               | ⏳ Upcoming    |
 | Strings                  | 10               | ⏳ Upcoming    |
 | Binary Search & Sorting  | 12               | ⏳ Upcoming    |
 | Recursion & Backtracking | 8                | ⏳ Upcoming    |
