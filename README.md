@@ -8,8 +8,8 @@ This repository contains my **daily progress in mastering Data Structures & Algo
 ## 📚 Topics Covered
 
 - ✅ Basics of Programming & Math
-- ✅ Arrays & Sorting
-- ✅ Binary Search & Matrix
+- 🔄 Arrays & Sorting
+- ⏳Binary Search & Matrix
 - ⏳ Strings & Hashing
 - ⏳ Recursion & Backtracking
 - ⏳ Linked Lists, Stacks & Queues
