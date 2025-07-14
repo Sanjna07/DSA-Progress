@@ -37,7 +37,7 @@ DSA-Progress/
 
 ## ✅ Progress Tracker
 
-| Topic                     | No. of Problems | Completed |
+| Topic                    | No. of Problems  |    Completed    |
 |--------------------------|------------------|-----------------|
 | Maths                    | 10               | 🔄 In Progress |
 | Arrays                   | 15               | ⏳ Upcoming    |
