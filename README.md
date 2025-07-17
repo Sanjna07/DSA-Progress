@@ -1,7 +1,7 @@
 # 🧠 DSA Progress Tracker – Striver’s A2Z Sheet in C++
 
 Hi! I'm Sanjana 👋  
-This repository contains my **daily progress in mastering Data Structures & Algorithms** using **C++**, based on the [Striver’s A2Z DSA Sheet](https://takeuforward.org/interviews/strivers-dsa-sheet-top-coding-interview-problems/).
+This repository contains my **daily progress in mastering Data Structures & Algorithms** using **C++**, based on the [Striver’s A2Z DSA Sheet](https://takeuforward.org/interviews/strivers-dsa-sheet-top-coding-interview-problems/)
 
 ---
 
