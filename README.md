@@ -13,7 +13,7 @@ This repository contains my **daily progress in mastering Data Structures & Algo
 - ⏳ Strings & Hashing
 - ⏳ Recursion & Backtracking
 - ⏳ Linked Lists, Stacks & Queues
-- ⏳ Trees, Graphs & DP (Coming Soon)
+- ⏳ Trees, Graphs & DP (Coming Soon).
 
 ---
 
