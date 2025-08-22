@@ -1,19 +1,50 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    
-/*   * * * *
-     * * * * 
-     * * * * 
-     * * * * 
-*/ 
+void print1(int n){
 
-for ( int i = 0; i<4; i++){
-    for (int j = 0; j<4; j++){
-        cout<<"* ";
+    /*  * * * *
+        * * * * 
+        * * * * 
+        * * * * 
+    */ 
+    for ( int i = 0; i<n; i++){
+        for (int j = 0; j<n; j++){
+            cout<<"* ";
+        };
+        cout<<endl;
     };
-    cout<<endl;
+
 };
-    return 0;
-}
+
+void print2(int n){
+
+    /*  * 
+        * * 
+        * * * 
+        * * * * 
+    */ 
+   for(int i =0 ; i<n; i++){
+    for (int j = 0; j <=i; j++){
+        cout << "* ";
+
+    };
+    cout<< endl;
+   }
+    
+};
+
+int main(){
+    // for test cases
+    /*int t;
+    cin >> t;
+    for (int i = 0; i<t; i++){
+        int n ;
+        cin >> n;
+        print1(n);
+    }*/
+    int n ;
+        cin >> n;
+        print2(n);
+
+};
