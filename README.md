@@ -21,15 +21,9 @@ This repository contains my **daily progress in mastering Data Structures & Algo
 
 ```
 DSA-Progress/
-├── 01_Math/
-├── 02_Arrays/
-├── 03_Strings/
-├── 04_Searching_Sorting/
-├── 05_Recursion_Backtracking/
-├── 06_LinkedLists/
-├── 07_Trees/
-├── 08_Graphs/
-├── 09_DP/
+├── Cpp_revision/
+├── Patterns/
+├── Basic_Maths/
 └── README.md
 ```
 
