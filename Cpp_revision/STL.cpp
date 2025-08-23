@@ -205,6 +205,120 @@ void example_priority_queue(){
 
 }
 
+//set
+void example_set(){
+
+    set<int> s;
+    s.insert(1);
+    s.emplace(2);
+    s.insert(2);
+    s.insert(4);
+    s.insert(3);
+
+    for(auto it : s){
+        cout<<it<<" "; // sorted order me print karega
+    }
+    cout<<endl;
+
+    cout<<s.size()<<endl;
+
+    cout<<s.count(1)<<endl; // agar element present hoga to 1 return karega nahi to 0
+    cout<<s.count(6)<<endl;
+
+    //auto it = s.find(3); // agar element present hoga to uska iterator return karega nahi to s.end() return karega
+    //auto it2 = s.find(6);
+
+    s.erase(2); // value delete kar dega
+
+    for(auto it : s){
+        cout<<it<<" ";
+    }
+    cout<<endl;
+
+    //auto it2 = s.find(3);
+    //s.erase(it2); // iterator ke through value delete kar dega
+    for(auto it : s){
+        cout<<it<<" ";
+    }
+    cout<<endl;
+
+    s.clear(); // saare element delete kar dega
+    cout<<s.size()<<endl;
+}
+
+//multiset
+void example_multiset(){ 
+    multiset<int>ms;
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(2);
+    ms.insert(2);
+    ms.insert(3);
+    ms.insert(3);
+
+    ms.erase(2); // saare 2 delete kar dega
+    for(auto it : ms){   
+        cout<<it<<" ";
+    }
+    cout<<endl;
+    ms.erase(ms.find(3)); // sirf ek 3 delete kar dega
+    for(auto it : ms){   
+        cout<<it<<" ";
+    }
+
+
+}
+
+//map
+void example_map(){
+    map<int,int> mp;
+    map<int, pair<int,int>> mpp;
+    map<pair<int,int>, int> mpp2;
+    mp[1] = 2; // 1 key ke liye 2 value set kar dega
+    mp[2] = 3;
+    mp.emplace(3,4); // 3 key ke liye 4 value set kar dega
+    mp.insert({4,5}); // 4 key ke liye 5 value set kar dega
+    mpp2[{2,3}] = 10; // 2,3 key ke liye 10 value set kar dega
+    
+    for(auto it : mp){
+        cout<<it.first<<" "<<it.second<<endl; // key value print karega
+    }
+
+    cout<<mp[1]<<endl; // 1 key ki value print karega
+    cout<<mp[5]<<endl; // 5 key present nahi hai to 0 print karega and 5 key ke liye 0 value set kar dega
+
+    auto it = mp.find(1); // agar key present hoga to uska iterator return karega nahi to mp.end() return karega
+    cout<<(*it).first<<" "<<(*it).second;
+
+    auto it2 = mp.find(5);
+}
+
+//multimap
+void example_multimap(){
+    multimap<int,int> mmp;
+    mmp.insert({1,2});
+    mmp.insert({1,3});
+    mmp.insert({1,4});
+    mmp.insert({2,3});
+
+    for(auto it : mmp){
+        cout<<it.first<<" "<<it.second<<endl; // key value print karega
+    }
+
+    cout<<mmp.count(1)<<endl; // 1 key kitni baar present hai wo print karega
+    auto it = mmp.find(1); // 1 key ka jo pehla element hoga uska iterator return karega
+    cout<<(*it).first<<" "<<(*it).second<<endl;
+
+    mmp.erase(1); // saare 1 key wale element delete kar dega
+    for(auto it : mmp){
+        cout<<it.first<<" "<<it.second<<endl; // key value print karega
+    }
+}
+
+
+
+
+
 int main(){
 
     //print(); 
@@ -216,7 +330,11 @@ int main(){
     //example_vector();
     //example_stack();
     //example_queue();
-    example_priority_queue();
+    // example_priority_queue();
+    //example_set();
+    //example_multiset();
+    //example_map();
+    example_multimap();
 
     return 0;
 }
