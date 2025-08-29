@@ -98,11 +98,20 @@ int gcdcalc2(int a, int b){
     }
 }
 
+
+int euclidgcd(int a, int b){
+    while (a>0 && b>0){
+        if (a>b) a = a%b;
+        else b = b%a;
+    }
+    if (a==0) return b;
+    else return a;
+}
 int main(){
     //int n;
     //cin>>n;
     int a, b;
     cin>>a>>b;
-    cout<<gcdcalc2(a,b);
+    cout<<euclidgcd(a,b);
     return 0;
 }
