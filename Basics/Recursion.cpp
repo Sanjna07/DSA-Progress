@@ -34,12 +34,22 @@ int rev(int i,int n){
     rev(i-1,n);
 }
 
+//Backtracking
+
+int numb(int i,int n){
+    if (i<1) 
+    return 0;
+    numb(i-1,n);
+    cout<< i <<endl;
+}
+
 main(){
     //f();
     int n;
     cin>>n;
     //name(1,n);
     //num(1,n);
-    rev(n,n);
+    //rev(n,n);
+    numb(n,n);
     return 0;
 }
