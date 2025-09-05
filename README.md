@@ -23,7 +23,7 @@ This repository contains my **daily progress in mastering Data Structures & Algo
 DSA-Progress/
 ├── Cpp_revision/
 ├── Patterns/
-├── Basic_Maths/
+├── Basics/
 └── README.md
 ```
 
