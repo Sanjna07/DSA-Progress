@@ -43,6 +43,16 @@ int numb(int i,int n){
     cout<< i <<endl;
 }
 
+//Sum of n numbers
+//1 parameterized
+int  add (int i ,int sum){
+    if (i<1) {
+        cout<<sum<<endl;
+        return 0;
+    }
+    add(i-1,sum+i);
+}
+
 main(){
     //f();
     int n;
@@ -50,6 +60,7 @@ main(){
     //name(1,n);
     //num(1,n);
     //rev(n,n);
-    numb(n,n);
+    // numb(n,n);
+    add(n,0);
     return 0;
 }
