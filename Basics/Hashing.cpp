@@ -1,17 +1,33 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int func( int num , int arr[]){
-    int count = 0;
-    for (int i = 0; i < num; i++){
-        if (arr[i] == num) count++;
-    }
-    return count;
-}
+int main() {
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
 
-int main(){
-    int arr[] = {1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10};
-    func(10, arr);
+    int arr[n];
+    cout << "Enter array elements (one per line):" << endl;
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];  // take one element per line
+    }
+
+    // precomputation
+    int hash[13] = {0};
+    for (int i = 0; i < n; i++) {
+        hash[arr[i]]++;
+    }
+
+    int q;
+    cout << "Enter number of queries: ";
+    cin >> q;
+
+    cout << "Enter queries (one per line):" << endl;
+    while (q--) {
+        int num;
+        cin >> num;  // read query number line by line
+        cout << hash[num] << endl;
+    }
 
     return 0;
 }
