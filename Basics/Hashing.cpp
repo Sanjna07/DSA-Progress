@@ -14,7 +14,7 @@ using namespace std;
     }
 
     // precomputation
-    int hash[100] = {0};
+    int hash[13] = {0};  //at max 10^7 using arrays 
     for (int i = 0; i < n; i++) {
         hash[arr[i]]++;
     }
@@ -46,7 +46,7 @@ int main() {
     int hash[256]={0};
     for (int i = 0; i< s.size(); i++){
         //hash[s[i]-'a']++;
-        hash[s[i]]++;
+        hash[s[i]]++; //autocasted to int
     }
 
     while (q--){
