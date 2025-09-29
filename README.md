@@ -7,8 +7,8 @@ This repository contains my **daily progress in mastering Data Structures & Algo
 
 ## 📚 Topics Covered
 
-- 🔄 Basics of Programming & Math
-- ⏳ Arrays & Sorting
+- ✅ Basics of Programming & Math
+- 🔄  Sorting & Arrays
 - ⏳Binary Search & Matrix
 - ⏳ Strings & Hashing
 - ⏳ Recursion & Backtracking
@@ -24,6 +24,7 @@ DSA-Progress/
 ├── Cpp_revision/
 ├── Patterns/
 ├── Basics/
+├── Sorting/
 └── README.md
 ```
 
@@ -33,10 +34,11 @@ DSA-Progress/
 
 | Topic                    | No. of Problems  |    Completed    |
 |--------------------------|------------------|-----------------|
-| Maths                    | 10               | 🔄 In Progress |
+| Maths & Basics           | 15               | ✅ Done        |
+| Sorting                  | 7                | 🔄 In Progress |
 | Arrays                   | 15               | ⏳ Upcoming    |
 | Strings                  | 10               | ⏳ Upcoming    |
-| Binary Search & Sorting  | 12               | ⏳ Upcoming    |
+| Binary Search            | 12               | ⏳ Upcoming    |
 | Recursion & Backtracking | 8                | ⏳ Upcoming    |
 | Linked List              | 15               | ⏳ Upcoming    |
 | Trees & Graphs           | 20+              | ⏳ Upcoming    |
