@@ -13,7 +13,7 @@ int largestElement(int arr[], int n) {
     return largest;
 }
 
-// Second Largest Element
+// Second Largest/Smallest Element
 
 int SecondLargest(int a[], int n) {
     int largest = a[0];
@@ -45,6 +45,22 @@ int SecondSmallest(int a[], int n) {
     return sSmallest;
 }
 
+// Remove duplicates from sorted array
+
+int removeDuplicates(int arr[], int n) {
+    if(n == 0 || n == 1) {
+        return n;
+    }
+    int i = 0;
+    for(int j = 0; j < n - 1; j++) {
+        if(arr[j] != arr[i]) {
+            arr[i+1] = arr[j];
+            i++;
+        }
+    }
+    return i+1;
+}
+
 int main() {
     int n;
     cout << "Enter the number of elements in the array: ";
@@ -57,9 +73,16 @@ int main() {
     /* int largest = largestElement(arr, n);
     cout << "The largest element in the array is: " << largest << endl;
     return 0;*/
-    int sl = SecondLargest(a,n);
+
+    /*int sl = SecondLargest(a,n);
     cout << "The Second largest element in the array is: " << sl << endl;
     int ss = SecondSmallest(a,n);
-    cout << "The Second smallest element in the array is: " << ss << endl;
+    cout << "The Second smallest element in the array is: " << ss << endl;*/
+
+    int size = removeDuplicates(a, n);
+    cout << "Array after removing duplicates: ";
+    for(int i = 0; i < size; i++) {
+        cout << a[i] << " ";
+    }
     
 }
