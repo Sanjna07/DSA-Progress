@@ -37,7 +37,7 @@ DSA-Progress/
 |--------------------------|------------------|-----------------|
 | Maths & Basics           | 15               | ✅ Done        |
 | Sorting                  | 7                | ✅ Done        |
-| Arrays                   | 15               | 🔄 In Progress |
+| Arrays                   | 40               | 🔄 In Progress |
 | Strings                  | 10               | ⏳ Upcoming    |
 | Binary Search            | 12               | ⏳ Upcoming    |
 | Recursion & Backtracking | 8                | ⏳ Upcoming    |
