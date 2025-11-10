@@ -54,6 +54,16 @@ void moveZeroes(int arr[], int n) {
     }
 }
 
+//linear search in array
+void search(int arr[], int n, int key) {
+    for(int i = 0; i < n; i++) {
+        if(arr[i] == key) {
+            cout << "Element found at index: " << i << endl;
+            return;
+        }
+    }
+    cout << "Element not found in the array." << endl;
+}
 
 int main() {
      int n;
@@ -82,11 +92,15 @@ int main() {
     //     cout << a[i] << " ";
     // }
 
-    moveZeroes(a, n);
-    cout << "\nArray after moving zeroes to the end: ";
-    for(int i = 0; i < n; i++) {
-        cout << a[i] << " ";
-    }
+    // moveZeroes(a, n);
+    // cout << "\nArray after moving zeroes to the end: ";
+    // for(int i = 0; i < n; i++) {
+    //     cout << a[i] << " ";
+    // }
+
+    cout << "\nSearching for the element in the array." << endl;
+    search(a, n, 5);
+
 
     return 0;
 }
