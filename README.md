@@ -63,7 +63,7 @@ DSA-Progress/
 Each code file is named based on the problem topic and includes:
 - 🧾 Problem Description (in comments)
 - 🔗 Problem link (LeetCode/GFG)
-- ✅ Solution using clean C++ code
+- ✅ Solution using clean C++ codes
 
 ---
 
