@@ -65,15 +65,54 @@ void search(int arr[], int n, int key) {
     cout << "Element not found in the array." << endl;
 }
 
-int main() {
-     int n;
-    cout << "Enter the number of elements in the array: ";
-    cin >> n;
-    int a[n];
-    cout << "Enter the elements of the array: ";
-    for(int i = 0; i < n; i++) {
-        cin >> a[i];
+// union of arrays
+vector <int> sortedArr(vector <int>a, vector<int>b){
+    int n1 = a.size();
+    int n2 = b.size();
+    int i = 0;
+    int j = 0;
+    vector<int> unionArr;
+
+    while(i < n1 && j < n2){
+        if(a[i] <= b[j]){
+            if(unionArr.size() == 0 || unionArr.back() != a[i]){
+                unionArr.push_back(a[i]);
+            }
+            i++;
+        }
+        else{
+            if(unionArr.size() == 0 || unionArr.back() != b[j]){
+                unionArr.push_back(b[j]);
+            }
+            j++;
+        }
     }
+
+    while(i < n1){
+    if(unionArr.empty() || unionArr.back() != a[i])
+        unionArr.push_back(a[i]);
+    i++;
+    }
+
+    while(j < n2){
+        if(unionArr.empty() || unionArr.back() != b[j])
+            unionArr.push_back(b[j]);
+        j++;
+    }
+
+
+    return unionArr;
+}
+
+int main() {
+    //  int n;
+    // cout << "Enter the number of elements in the array: ";
+    // cin >> n;
+    // int a[n];
+    // cout << "Enter the elements of the array: ";
+    // for(int i = 0; i < n; i++) {
+    //     cin >> a[i];
+    // }
 
     // int d;
     // cout << "Enter the number of positions to left rotate the array: ";
@@ -98,9 +137,30 @@ int main() {
     //     cout << a[i] << " ";
     // }
 
-    cout << "\nSearching for the element in the array." << endl;
-    search(a, n, 5);
+    // cout << "\nSearching for the element in the array." << endl;
+    // search(a, n, 5);
 
+    int n1, n2;
+    cin >> n1;                   // size of array A
+    vector<int> a(n1);
+    for(int i = 0; i < n1; i++){
+        cin >> a[i];
+    }
+
+    cin >> n2;                   // size of array B
+    vector<int> b(n2);
+    for(int i = 0; i < n2; i++){
+        cin >> b[i];
+    }
+
+    sort(a.begin(), a.end());
+    sort(b.begin(), b.end());
+
+    vector<int> result = sortedArr(a, b);
+
+    for(int x : result){
+        cout << x << " ";
+    }
 
     return 0;
 }
