@@ -23,7 +23,15 @@ void preOrder(Node* node){
     preOrder(node -> right);
 };
 
-// 
+// in order traversal
+void inOrder(Node* node){
+    if(node == NULL){
+        return;
+    }
+    inOrder(node -> left);
+    cout<<node->data<<" ";
+    inOrder(node -> right);
+}
 
 int main(){
 
@@ -36,6 +44,8 @@ int main(){
     root -> right -> right = new Node(7);
 
     preOrder(root);
+    cout<<endl;
+    inOrder(root);
 
     return 0;
 }
