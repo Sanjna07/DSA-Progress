@@ -33,6 +33,16 @@ void inOrder(Node* node){
     inOrder(node -> right);
 }
 
+//post Order traversal
+void postOrder(Node* node){
+    if(node == NULL){
+        return;
+    }
+    postOrder(node -> left);
+    postOrder(node -> right);
+    cout<<node -> data<<" ";
+}
+
 int main(){
 
     struct Node* root = new Node(1);
@@ -46,6 +56,8 @@ int main(){
     preOrder(root);
     cout<<endl;
     inOrder(root);
+    cout<<endl;
+    postOrder(root);
 
     return 0;
 }
