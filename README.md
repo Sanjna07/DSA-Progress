@@ -25,6 +25,7 @@ DSA-Progress/
 ├── Cpp_revision/
 ├── Patterns/
 ├── Basics/
+├── Binary_Trees/
 ├── Sorting/
 └── README.md
 ```
@@ -42,7 +43,8 @@ DSA-Progress/
 | Binary Search            | 12               | ⏳ Upcoming    |
 | Recursion & Backtracking | 8                | ⏳ Upcoming    |
 | Linked List              | 15               | ⏳ Upcoming    |
-| Trees & Graphs           | 20+              | ⏳ Upcoming    |
+| Trees                    | 15               | 🔄 In Progress |
+| Graphs                   | 20+              | ⏳ Upcoming    |
 | Dynamic Programming      | 20+              | ⏳ Upcoming    |
 
 ---
