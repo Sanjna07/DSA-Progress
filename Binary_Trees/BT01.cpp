@@ -57,6 +57,24 @@ bool isBalanced(Node* root){
  }
 
 
+ // max path sum in binary tree
+    int maxPathSum(Node* root){
+        int maxi = INT_MIN;
+        height(root , maxi);
+        return maxi;
+    }
+    int height(Node* node , int &maxi){
+        if(node == NULL) return 0;
+
+        int lh = max(0,(node -> left , maxi));
+        int rh = max(0,(node -> right , maxi));
+
+        maxi = max(maxi , lh + rh + node -> data);
+        return max(lh , rh) + node -> data;
+
+    }
+
+
 int main(){
     Node* root = new Node(1);
     root -> left = new Node(2);
@@ -74,5 +92,10 @@ int main(){
         cout << "The binary tree is not balanced";
     }
 
+    cout << endl;
+    cout << "Diameter of binary tree is: " << diameterBT(root);
+
+    cout << endl;
+    cout << "Max path sum in binary tree is: " << maxPathSum(root);
     return 0;
 }
