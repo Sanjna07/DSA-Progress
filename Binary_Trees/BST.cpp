@@ -42,6 +42,57 @@ Node* insertInBST(Node* root, int key){
     return root;
 };
 
+//deletion in BST
+Node* deleteInBST(Node* root, int key){
+    if(root == NULL){
+        return NULL;
+    }
+    if(key < root -> data){
+        root -> left = deleteInBST(root -> left, key);
+    }
+    else if(key > root -> data){
+        root -> right = deleteInBST(root -> right, key);
+    }
+    else{
+        //node found
+        //case 1: no child
+        if(root -> left == NULL && root -> right == NULL){
+            delete root;
+            return NULL;
+        }
+        //case 2: one child
+        else if(root -> left == NULL){
+            Node* temp = root -> right;
+            delete root;
+            return temp;
+        }
+        else if(root -> right == NULL){
+            Node* temp = root -> left;
+            delete root;
+            return temp;
+        }
+        //case 3: two children
+        else{
+            Node* succParent = root;
+            Node* succ = root -> right;
+            while(succ -> left != NULL){
+                succParent = succ;
+                succ = succ -> left;
+            }
+            //copy successor value to root
+            root -> data = succ -> data;
+            //delete successor
+            if(succParent != root){
+                succParent -> left = deleteInBST(succParent -> left, succ -> data);
+            }
+            else{
+                succParent -> right = deleteInBST(succParent -> right, succ -> data);
+            }
+        }
+    }
+    return root;
+}
+
 int main(){
     Node* root = new Node(5);
     root -> left = new Node(3);
@@ -58,6 +109,22 @@ int main(){
         cout << "Found - " << result->data << endl;
     } else {
         cout << "Not Found" << endl;
+    }
+
+    key = 6;
+    cout << "Deleting " << key << " in BST." << endl;
+    root = deleteInBST(root, key);
+    cout << "Inorder Traversal after deletion: ";
+    vector<int> inorder;
+    function<void(Node*)> inorderTraversal = [&](Node* node) {
+        if (node == NULL) return;
+        inorderTraversal(node->left);
+        inorder.push_back(node->data);
+        inorderTraversal(node->right);
+    };
+    inorderTraversal(root);
+    for(int val : inorder){
+        cout << val << " ";
     }
    
     return 0;
