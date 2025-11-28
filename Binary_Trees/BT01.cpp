@@ -23,6 +23,23 @@ int maxHeight(Node* root){
 
 }
 
+
+//Balanced binary tree
+bool isBalanced(Node* root){
+    if(root == NULL) return 0;
+
+    int lh = maxHeight(root -> left);
+    if(lh == -1) return -1;
+    int rh = maxHeight(root -> right);
+    if(rh == -1) return -1;
+
+    if(abs(lh - rh) > 1) return -1;
+    return 1 + max(lh , rh);
+    
+}
+
+
+
 int main(){
     Node* root = new Node(1);
     root -> left = new Node(2);
@@ -31,6 +48,14 @@ int main(){
     root -> left -> left -> left = new Node(5);
 
     cout << "max height of the binary tree is:" << maxHeight(root);
+    cout << endl;
+
+    if(isBalanced(root) != -1){
+        cout << "The binary tree is balanced";
+    }
+    else{
+        cout << "The binary tree is not balanced";
+    }
 
     return 0;
 }
