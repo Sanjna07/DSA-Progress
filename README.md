@@ -7,7 +7,7 @@ This repository contains my **daily progress in mastering Data Structures & Algo
 
 ## 📚 Topics Covered
 
-- ✅ Basics of Programming & Math
+- ✅ Basics of Programming & Maths
 - 🔄 Sorting & Arrays
 - 🔄 Binary Trees 
 - ⏳Matrix
